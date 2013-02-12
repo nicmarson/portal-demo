@@ -50,67 +50,142 @@
       </div>
     </nav>
 
-    <div class="tabbable tabs-below" id="hero">
-      <div class="container">
-        <div class="tab-content">
-
-          <div class="tab-pane hero-unit hero-image active" id="default">
-            <div class="caption span8">
-              <h1 class="caption-title">General Marketing Headline <br>
-                <small>Sub-headline and/or call to action</small></h1>
-              <p class="caption-text">Additional text as necessary to address the needs of the campaign or initiative.</p>
-            </div>
+    <div class="container" role="main">
+      <ul class="breadcrumb">
+        <li><a href="index.html">Home</a> <span class="divider">&rsaquo;</span></li>
+        <li class="active">Contact Us</li>  
+      </ul>
+      <article class="article article-right-sidebar post hentry row-fluid">
+        <div class="content main-content span8 blocks" id="main">
+          <div class="page-header">
+            <h1>Contact Us</h1>
           </div>
-
-          <div class="tab-pane hero-unit hero-image" id="individual">
-            <div class="caption span8">
-              <h1 class="caption-title">Individuals &amp; Families <br>
-                <small>Sub-headline and/or call to action</small></h1>
-              <p class="caption-text">Additional text as necessary to address the needs of the campaign or initiative.</p>
-            </div>
+          <hgroup>
+            <h2>Customer Service</h2>
+            <p>Help with benefits and account management</p>
+          </hgroup>
+          <table class="contact-info">
+            <tbody>
+              <tr>
+                <td class="icon-contact-info"><span aria-hidden="true" class="icon-phone"><span class="caret"></span></span></td>
+                <td class="contact-info-entry"><nobr>1 (888) 344-6347</nobr></td>
+                <td class="icon-contact-info"><span aria-hidden="true" class="icon-email"><span class="caret"></span></span></td>
+                <td><a href="#myModal" data-toggle="modal">Secure email</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <hgroup>
+            <h2>Medicare</h2>
+            <p>Help for all your Medicare needs</p>
+          </hgroup>
+          <table class="contact-info">
+            <tbody>
+              <tr>
+                <td class="icon-contact-info"><span aria-hidden="true" class="icon-phone"><span class="caret"></span></span></td>
+                <td class="contact-info-entry"><nobr>1 (800) 541-8981</nobr><br />
+                <small>Daily, 8am - 8pm<br />
+                TTY: 711</small>
+                </td>
+                <td class="icon-contact-info"><span aria-hidden="true" class="icon-email"><span class="caret"></span></span></td>
+                <td class="contact-info-entry"><a href="#myModal" data-toggle="modal">Secure email</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <hgroup>
+            <h2>Sales</h2>
+            <p>Help with choosing the right plan</p>
+          </hgroup>
+          <table class="contact-info">
+            <tbody>
+              <tr>
+                <td class="icon-contact-info"><span aria-hidden="true" class="icon-phone"><span class="caret"></span></span></td>
+                <td class="contact-info-entry"><nobr>1 (888) 734-3623</nobr></td>
+                <td class="icon-contact-info"><span aria-hidden="true" class="icon-email"><span class="caret"></span></span></td>
+                <td class="contact-info-entry"><a href="#myModal" data-toggle="modal">Secure email</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>Office Locations and Hours</h2>
+          <div class="btn-group" data-toggle="buttons-radio">
+            <button type="button" class="btn btn-primary active js-washingtonMarkers">Washington</button>
+            <button type="button" class="btn btn-primary js-oregonMarkers">Oregon</button>
+            <button type="button" class="btn btn-primary js-idahoMarkers">Idaho</button>
+            <button type="button" class="btn btn-primary js-utahMarkers">Utah</button>
           </div>
-
-          <div class="tab-pane hero-unit hero-image" id="medicare">
-            <div class="caption span8">
-              <h1 class="caption-title">Medicare-Eligible <br>
-                <small>Sub-headline and/or call to action</small></h1>
-              <p class="caption-text">Additional text as necessary to address the needs of the campaign or initiative.</p>
-            </div>
+          <div class="row-fluid" id="map_container">
+            <div class="res" id="map_sidebar"></div>
+            <div class="map" id="map_canvas"></div>
           </div>
-
-          <div class="tab-pane hero-unit hero-image" id="employers">
-            <div class="caption span8">
-              <h1 class="caption-title">Employers <br>
-                <small>Sub-headline and/or call to action</small></h1>
-              <p class="caption-text">Additional text as necessary to address the needs of the campaign or initiative.</p>
+          <noscript>
+            <div class="row-fluid">
+              <div class="span3">
+                <address>
+                <strong>Burlington</strong><br />
+                333 Gilkey Road<br />
+                Burlington, WA 98233<br />
+                <nobr>1 (877) 276-5906</nobr><br />
+                Open weekdays 8-5
+                </address>
+                <address>
+                <strong>Everett</strong><br />
+                12728 19th Avenue SE,<br />
+                Suite 101<br />
+                Everett, WA 98208<br />
+                <nobr>(425) 348-8100</nobr><br />
+                Open weekdays 8-5
+                </address>
+                <address>
+                <strong>Seattle</strong><br />
+                1800 Ninth Avenue<br />
+                Seattle, WA 98101<br />
+                <nobr>(206) 464-3600</nobr><br />
+                Open weekdays 8-5
+                </address>
+                <address>
+                <strong>Tacoma</strong><br />
+                1501 Market Street<br />
+                Tacoma, WA 98402<br />
+                <nobr>1 (888) 367-2112</nobr><br />
+                Open weekdays 8-5
+                </address>
+              </div>
+              <div class="span9">
+                <iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/ms?msa=0&amp;msid=201253017668109834490.0004cdff8f3cf98cd43f0&amp;ie=UTF8&amp;t=h&amp;ll=47.856847,-122.323435&amp;spn=1.216772,0.233289&amp;output=embed"></iframe><br />
+                <small class="muted">View <a href="https://www.google.com/maps/ms?msa=0&amp;msid=201253017668109834490.0004cdff8f3cf98cd43f0&amp;ie=UTF8&amp;t=h&amp;ll=47.856847,-122.323435&amp;spn=1.216772,0.233289&amp;source=embed">Regence Office Locations</a> in a larger map</small>
+              </div>
             </div>
-          </div>
-
-          <div class="tab-pane hero-unit hero-image" id="producers">
-            <div class="caption span8">
-              <h1 class="caption-title">Producers <br>
-                <small>Sub-headline and/or call to action</small></h1>
-              <p class="caption-text">Additional text as necessary to address the needs of the campaign or initiative.</p>
-            </div>
-          </div>
-
-          <div class="tab-pane hero-unit hero-image" id="providers">
-            <div class="caption span8">
-              <h1 class="caption-title">Providers <br>
-                <small>Sub-headline and/or call to action</small></h1>
-              <p class="caption-text">Additional text as necessary to address the needs of the campaign or initiative.</p>
-            </div>
-          </div>
-
+          </noscript>
         </div>
-        <ul class="nav nav-pills" id="heroTab">
-          <li class="tab-individual"><a href="#individual" data-toggle="tab">Individuals &amp; Families</a></li>
-          <li class="tab-medicare"><a href="#medicare" data-toggle="tab">Medicare-Eligible</a></li>
-          <li class="tab-employers"><a href="#employers" data-toggle="tab">Employers</a></li>
-          <li class="tab-producers"><a href="#producers" data-toggle="tab">Producers</a></li>
-          <li class="tab-providers"><a href="#providers" data-toggle="tab">Providers</a></li>
-        </ul>
-      </div>
+        <aside class="sidebar span4 blocks">
+          <h3>Mailing Address</h3>
+          <div class="content sidebar-content">
+            <address>
+              <b>Asuris Corporate</b><br />
+              PO Box 1071<br />
+              Portland OR 97217
+            </address>
+            <address>
+              <b>Asuris Sales and Applications</b><br />
+              PO Box 1107<br />
+              Lewiston ID 83501
+            </address>
+            <address>
+              <b>Asuris MedAdvantage and Medicare Script</b><br />
+              PO Box 12625, MS S5B<br />
+              Salem OR 97309
+            </address>
+          </div>
+
+          <h3>Other Contacts</h3>
+          <ul class="nav nav-list">
+            <li><a href="#">Membership Services&#187;</a></li>
+            <li><a href="#">Group Accounts&#187;</a></li>
+            <li><a href="#">ASO Accounts&#187;</a></li>
+            <li><a href="#">Provider Services&#187;</a></li>
+            <li><a href="#">Media Relations&#187;</a></li>
+          </ul>
+        </aside>
+      </article>
     </div>
     
     <nav class="nav-information">
@@ -204,6 +279,14 @@
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/script.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="js/google-map.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Load regional markers
+        placeMarkers('xml/washington.xml');
+      });
+    </script>
 
     <script>
       var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

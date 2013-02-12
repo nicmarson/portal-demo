@@ -2,6 +2,19 @@
 // Custom navigation
 // --------------------------------------------------
 
+
+// Breadcrumb
+.breadcrumb {
+  padding: 8px 0;
+  margin: @baseLineHeight 0 0;
+  background-color: transparent;
+
+  > li .divider,
+  > .active {
+    color: @gray;
+  }
+}
+
 // Navigation
 // INVERTED COLORS
 // ---------------
@@ -25,41 +38,13 @@
 }
 
 
-// Primary
-.nav-primary {
-  margin-bottom: 0;
-}
-.nav-primary > li > a {
-  font-family: @sansFontFamilyLight;
-  background: @navPrimaryBackground;
-  border: 1px solid @navPrimaryBorder;
-  .border-radius(0);
-  .box-shadow(inset 0 4px @navPrimaryBoxShadow);
-  color: @navPrimaryLinkColor;
-  font-size: 22px;
-  line-height: 26px;
-  padding: 10px 15px;
-
-  &:hover {
-    background: @navPrimaryBackgroundHover;
-  }
-}
-.nav-primary > .active > a,
-.nav-primary > .active > a:hover {
-  background: @navPrimaryBackgroundActive;
-}
-
-
-// Secondary
-.nav-secondary {
-  background: @navSecondaryBackground;  
-  #gradient > .vertical(@navSecondaryBackground, @navSecondaryBottomBackground);
+// Nav Information
+.nav-information {
   margin-top: (@gridGutterWidth*2);
   padding: @gridGutterWidth 0 0;
 
-  hr {
-    border-top-color: @navSecondaryhrBorder;
-    margin: 5px 0;
+  .container {
+    border-bottom: 1px solid @navSecondaryhrBorder;
   }
   .nav.unstyled {
     font-size: 12px;

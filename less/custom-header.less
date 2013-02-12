@@ -6,8 +6,8 @@
 
 #header {
   background: @white;
+  border-bottom: 1px solid @headerLinkBorder;
   color: @headerText;
-  font-size: 18px;
   min-height: @headerHeight;
   text-align: right;
 
@@ -15,61 +15,103 @@
     background-color: transparent;
     text-decoration: none;
   }
-  .nav-brand {
-    margin-left: 20px;
-    margin-right: 5px;
-    padding-bottom: 18px;
-    position: relative;
-  }
-  .brand-region {
-    bottom: 0;
-    color: @grayLight;
-    display: block;
-    font-family: arial;
-    font-size: 12px;
-    left: 0;
-    line-height: 18px;
-    position: absolute;
-    white-space: nowrap;
+  .nav {
+    margin: 0;
   }
   .container {
     padding: 0;
     position: relative;
   }
-  .logo-asuris {
-    // Height 45px
-    margin-bottom: 2px;
-    margin-top: 15px;
+
+
+  // Nav Brand
+  .nav-brand {
+    float: left;
+
+    a {
+      display: block;
+      margin-left: 20px;
+      margin-right: 5px;
+      padding-bottom: 18px;
+      position: relative;
+    }
+    .brand-region {
+      bottom: 0;
+      color: @grayLight;
+      display: block;
+      font-family: arial;
+      font-size: 12px;
+      left: 0;
+      line-height: 18px;
+      position: absolute;
+      white-space: nowrap;
+    }
+    .logo-asuris {
+      // Height 45px
+      margin-bottom: 5px;
+      margin-top: 12px;
+    }
+    .logo-myasuris {
+      // Height 33px
+      margin-bottom: 7px;
+      margin-top: 22px;
+    }
+    .logo-myregence {
+      // Height 50px
+      margin-bottom: 2px;
+      margin-top: 10px;
+    }
+    .logo-regence-s,
+    .logo-regence-cs {
+      // Height 33px
+      margin-bottom: 10px;
+      margin-top: 19px;
+    }
+    .logo-regence-s .brand-region {
+      left: 36px;
+    }
+    .logo-regence-cs .brand-region {
+      left: 70px;
+    }
   }
-  .logo-myasuris {
-    // Height 33px
-    margin-bottom: 7px;
-    margin-top: 22px;
+
+
+  // Nav Search  
+  .nav-search {
+    border-right: 1px solid @headerLinkBorder;
+    float: right;
+
+    form {
+      margin: 25px;
+      position: relative;
+    }
+    button {
+      border: none;
+      position: absolute;
+      right: 10px;
+      top: 0;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
-  .logo-myregence {
-    // Height 50px
-    margin-bottom: 2px;
-    margin-top: 10px;
-  }
-  .logo-regence-s,
-  .logo-regence-cs {
-    // Height 33px
-    margin-bottom: 7px;
-    margin-top: 22px;
-  }
-  .logo-regence-s .brand-region {
-    left: 36px;
-  }
-  .logo-regence-cs .brand-region {
-    left: 70px;
-  }
-  .span-controls {
-    border-top: 1px solid @headerLinkBorder;
-    position: relative;
+
+
+  // Nav Shopping
+  .nav-shopping {
+    border-right: 1px solid @headerLinkBorder;
+    float: right;
+    text-align: left;
 
     a {
       color: @headerLinkColor;
+      display: block;
+      height: 30px;
+      padding: 25px 100px 25px 70px;
+      position: relative;
       text-decoration: none;
+      .transition(background-color .2s ease-in-out);
 
       &:hover {
         background-color: @headerLinkBackground;
@@ -100,65 +142,37 @@
     .active > a:focus {
       background-color: darken(@headerLinkBackground, 4%);
     }
-    [class^="icon-"] {
-      color: @brand;
-    }
-  }
-  .span-controls > div {
-    border-left: 1px solid @headerLinkBorder;
-    height: @headerHeight;
-  }
-
-  // Buttons
-  .nav-shopping {
-    float: right;
-    height: 40px;
-    line-height: 20px;
-    padding: 25px 165px 25px 70px;
-
-    small {
-      color: @grayLight;
-      display: block;
-      font-size: 13px;
-    }
-    .caret,
-    [class^="icon-"] {
-      position: absolute;
-      top: 20px;
-    }
-    .caret,
-    .shopping-label {
-      display: block;
-    }
     .caret {
       border-top-color: @brand;
       border-top-width: 8px;
       border-right-width: 8px;
       border-left-width:  8px;
-      margin-top: 22px;
-      right: 165px;
+      display: block;
+      margin-top: 16px;
+      position: absolute;
+      right: 15px;
+      top: 22px;
     }
     .icon-users {
-      left: 20px;
+      color: @brand;
+      font-size: 26px;
+      left: 16px;
       height: 40px;
-      line-height: 40px;
+      line-height: 30px;
+      position: absolute;
+      top: 22px;
     }
-    .toggle {
+    .shopping-label {
       display: block;
-      height: @headerHeight;
-      line-height: @headerHeight;
-      padding: 0 10px;
-      position: relative;
-      .transition(background-color .2s ease-in-out);
+      font-size: 16px;
+      line-height: 16px;
 
-      [class^="icon-"] {
-        font-size: 30px;
+      small {
+        color: @grayLight;
+        display: block;
+        font-size: 13px;
       }
     }
-  }
-
-  .nav-search {
-    float: right;
   }
 }
 .brand {
