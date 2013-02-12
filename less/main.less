@@ -1,0 +1,103 @@
+/*!
+ * Main - Custom Styles
+ *
+ * Author - Nic Marson
+ * Date - 1/22/2013
+ * Version - 1.0
+ *
+ * Designed and built to fix consistency issues with the Medicare site
+ */
+
+// Core variables and mixins
+@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "mixins.less";
+
+@font-face {
+  font-family: 'icomoon';
+  src:url('../fonts/icomoon.eot');
+  src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.svg#icomoon') format('svg'),
+    url('../fonts/icomoon.woff') format('woff'),
+    url('../fonts/icomoon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.row-fluid .span2x4 {
+  width: 18.19%; //18.29
+}
+
+// Custom styles
+@import "custom-type.less";
+@import "custom-nav.less";
+@import "custom-hero.less";
+@import "custom-header.less";
+@import "custom-footer.less";
+
+
+// MEDIA QUERIES
+// ------------------
+
+// Large desktops
+@import "custom-1200px-min.less";
+
+// Desktops and larger
+@import "custom-980px-min.less";
+
+// Tablets to regular desktops
+@media (min-width: 768px) and (max-width: 979px) {
+  .row-fluid .span2x4 {
+    width: 17.69%; //17.79
+  }
+}
+
+// Tablets and larger
+@import "custom-768px-min.less";
+
+// Phones to portrait tablets and narrow desktops
+@import "custom-767px-max.less";
+
+// Breakpoints
+@highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+              ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+              ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+              ~"only screen and (min-device-pixel-ratio: 1.5)";
+@mobile:      ~"only screen and (max-width: 767px)";
+@tablet:      ~"only screen and (min-width: 768px) and (max-width: 979px)";
+@desktop:     ~"only screen and (min-width: 980px) and (max-width: 1199px)";
+@desktop-xl:  ~"only screen and (min-width: 1200px)";
+
+
+body {
+    &:after {
+      background: red;
+      bottom: 0;
+      color: @white;
+      content: "undefined";
+      left: 0;
+      .opacity(80);
+      padding: .5em 1em;
+      position: fixed;
+      text-align: center;
+      z-index: 99;
+    @media @mobile {
+      background: orange;
+      content: "mobile";
+    }
+    @media @tablet {
+      background: purple;
+      content: "tablet";
+    }
+    @media @desktop {
+      background: green;
+      content: "desktop";
+    }
+    @media @desktop-xl {
+      background: blue;
+      content: "desktop-xl";
+    }
+  }
+}
+
+
+

@@ -1,0 +1,67 @@
+//
+// Custom typography
+// --------------------------------------------------
+
+// Headings
+// -------------------------
+h1 {
+  color: @brand;
+  font-size: 36px;
+  line-height: 46px;
+  margin: 10px 0;
+  text-shadow: 0 0 1px rgba(0,0,0,.1); // Helps text rendering on Windows
+}
+h2 {
+  color: @orange;
+  font-size: 28px;
+  line-height: 36px;
+  text-shadow: 0 0 1px rgba(0,0,0,.1); // Helps text rendering on Windows
+}
+h3 {
+  font-size: 20px;
+  line-height: 26px;
+  text-shadow: 0 0 1px rgba(0,0,0,.1); // Helps text rendering on Windows
+}
+
+
+.alert {
+  background-color: transparent;
+}
+.dropdown-menu {
+  color: @black;
+}
+.well-clear {
+  background-color: transparent;
+}
+
+
+// Orange Square Bullets
+ul.bulleted li {
+  margin: @baseLineHeight / 2 0;
+}
+ul.bulleted > li {
+  list-style: square;
+}
+.generatedcontent {
+
+  ul.bulleted > li {
+    list-style: none;
+    position: relative;
+  }
+  ul.bulleted > li:before {
+    background: @bulletBackground;
+    .border-radius(2px);
+    content: "";
+    height: 8px;
+    left: -(@listIndent);
+    position: absolute;
+    top: @baseFontSize / 2;
+    width: 8px;
+  }
+}
+
+// Button Containers
+.btn-block {
+  padding-left: 15px;
+  text-align: left;
+}

@@ -1,0 +1,234 @@
+/*------------------------------------*\
+    $CUSTOM
+    $HEADER
+\*------------------------------------*/
+
+
+#header {
+  background: @white;
+  color: @headerText;
+  font-size: 18px;
+  min-height: @headerHeight;
+  text-align: right;
+
+  a:hover {
+    background-color: transparent;
+    text-decoration: none;
+  }
+  .nav-brand {
+    margin-left: 20px;
+    margin-right: 5px;
+    padding-bottom: 18px;
+    position: relative;
+  }
+  .brand-region {
+    bottom: 0;
+    color: @grayLight;
+    display: block;
+    font-family: arial;
+    font-size: 12px;
+    left: 0;
+    line-height: 18px;
+    position: absolute;
+    white-space: nowrap;
+  }
+  .container {
+    padding: 0;
+    position: relative;
+  }
+  .logo-asuris {
+    // Height 45px
+    margin-bottom: 2px;
+    margin-top: 15px;
+  }
+  .logo-myasuris {
+    // Height 33px
+    margin-bottom: 7px;
+    margin-top: 22px;
+  }
+  .logo-myregence {
+    // Height 50px
+    margin-bottom: 2px;
+    margin-top: 10px;
+  }
+  .logo-regence-s,
+  .logo-regence-cs {
+    // Height 33px
+    margin-bottom: 7px;
+    margin-top: 22px;
+  }
+  .logo-regence-s .brand-region {
+    left: 36px;
+  }
+  .logo-regence-cs .brand-region {
+    left: 70px;
+  }
+  .span-controls {
+    border-top: 1px solid @headerLinkBorder;
+    position: relative;
+
+    a {
+      color: @headerLinkColor;
+      text-decoration: none;
+
+      &:hover {
+        background-color: @headerLinkBackground;
+        color: @headerLinkColorHover;
+        text-decoration: none;
+
+        small,
+        [class^="icon-"] {
+          color: @headerLinkColorHover;
+        }
+      }
+    }
+    a:hover .caret,
+    .active > a .caret {
+      border-color: @white rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+    .active > a {
+      background-color: @headerLinkBackground;
+      color: @white;
+      text-decoration: none;
+      
+      small,
+      [class^="icon-"] {
+        color: @white;
+      }
+    }
+    .active > a:hover,
+    .active > a:focus {
+      background-color: darken(@headerLinkBackground, 4%);
+    }
+    [class^="icon-"] {
+      color: @brand;
+    }
+  }
+  .span-controls > div {
+    border-left: 1px solid @headerLinkBorder;
+    height: @headerHeight;
+  }
+
+  // Buttons
+  .nav-shopping {
+    float: right;
+    height: 40px;
+    line-height: 20px;
+    padding: 25px 165px 25px 70px;
+
+    small {
+      color: @grayLight;
+      display: block;
+      font-size: 13px;
+    }
+    .caret,
+    [class^="icon-"] {
+      position: absolute;
+      top: 20px;
+    }
+    .caret,
+    .shopping-label {
+      display: block;
+    }
+    .caret {
+      border-top-color: @brand;
+      border-top-width: 8px;
+      border-right-width: 8px;
+      border-left-width:  8px;
+      margin-top: 22px;
+      right: 165px;
+    }
+    .icon-users {
+      left: 20px;
+      height: 40px;
+      line-height: 40px;
+    }
+    .toggle {
+      display: block;
+      height: @headerHeight;
+      line-height: @headerHeight;
+      padding: 0 10px;
+      position: relative;
+      .transition(background-color .2s ease-in-out);
+
+      [class^="icon-"] {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .nav-search {
+    float: right;
+  }
+}
+.brand {
+  background: url("../img/identity/identity.png") no-repeat;
+  display: block;
+  max-width: 250px;
+  min-width: 143px;
+  position: relative;
+  *width: 250px;
+
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* Logos */
+.logo-asuris {
+  background-position: 0 -300px;
+  height: 45px;
+  width: 148px;
+}
+.logo-myasuris {
+  background-position: 0 -400px;
+  height: 33px;
+  width: 176px;
+}
+.logo-myregence {
+  background-position: 0 -200px;
+  height: 50px;
+  width: 250px;
+}
+.logo-regence-cs {
+  background-position: 0 0;
+  height: 33px;
+  width: 180px;
+}
+.logo-regence-s {
+  background-position: 0 -100px;
+  height: 33px;
+  width: 145px;
+}
+/* High Res Support */
+@media all and (-webkit-min-device-pixel-ratio : 1.5) {
+
+  .backgroundsize .brand {
+    background-image: url("../img/identity/identity@2x.png");
+    background-size: 250px auto; /* Actual width is 450px */
+  }
+}
+
+/* SVG Support */
+.svg.backgroundsize .logo-regence-cs {
+  background: url("../img/identity/regence-cs.svg") no-repeat 0 0;
+  background-size: 178px auto;
+}
+.svg.backgroundsize .logo-regence-s {
+  background: url("../img/identity/regence-s.svg") no-repeat 0 0;
+  background-size: 143px auto;
+}
+.svg.backgroundsize .logo-myregence {
+  background: url("../img/identity/myregence.svg") no-repeat 0 0;
+  background-size: 250px auto;
+}
+.svg.backgroundsize .logo-asuris {
+  background: url("../img/identity/asuris.svg") no-repeat 0 0;
+  background-size: 148px auto;
+}
+.svg.backgroundsize .logo-myasuris {
+  background: url("../img/identity/myasuris.svg") no-repeat 0 0;
+  background-size: 176px auto;
+}
