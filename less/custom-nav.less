@@ -89,3 +89,24 @@
 .navbar-inverse .navbar-inner {
   color: @white;
 }
+
+
+
+// ARTICLE LIST
+// ------------
+.article-list > li {
+  font-size: 18px;
+
+  a {
+    border-top: 1px solid #DDDFE0;
+    color: @gray;
+    padding: @baseLineHeight 15px;
+
+    &:hover {
+      background: @grayLighter;
+    }
+  }
+  &:last-child > a {
+    border-bottom: none;
+  }
+}

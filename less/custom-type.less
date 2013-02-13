@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 body {
-  #gradient > .vertical(@bodyTopColor, @bodyBackground);
+  background-color: #EFF5F7;
 }
 
 // Headings
@@ -73,25 +73,26 @@ hgroup {
 }
 
 
-.alert {
-  background-color: transparent;
-}
-.dropdown-menu {
-  color: @black;
-}
-.well-clear {
-  background-color: transparent;
-}
+// Headers
+// -------------------------
+.page-header,
+.section-header {
 
-.btn-link {
-  padding-left: 0;
-  padding-right: 0;
-
-  .caret {
-    border-top-color: @linkColor;
+   h1, h2, h3, h4, h5, h6 {
+    margin: 0;
   }
-  &:hover .caret {
-    border-top-color: @linkColorHover;
+}
+.page-header {
+  margin: @baseLineHeight 0 (@baseLineHeight * 1.5);
+}
+.section-header {
+  background: #EAEFF1;
+  border-top: 1px solid #E0E3E4;
+  margin: @baseLineHeight 0 (@baseLineHeight * 1.5);
+  padding: @baseLineHeight/2 15px;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: @orange;
   }
 }
 
@@ -121,7 +122,28 @@ ul.bulleted > li {
   }
 }
 
-// Button Containers
+
+// Components
+.alert {
+  background-color: transparent;
+}
+.dropdown-menu {
+  color: @black;
+}
+.well-clear {
+  background-color: transparent;
+}
+.btn-link {
+  padding-left: 0;
+  padding-right: 0;
+
+  .caret {
+    border-top-color: @linkColor;
+  }
+  &:hover .caret {
+    border-top-color: @linkColorHover;
+  }
+}
 .btn-block {
   padding-left: 15px;
   text-align: left;

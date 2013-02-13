@@ -45,14 +45,7 @@
   width: 18.19%;
 }
 body {
-  background-color: #ddeaf2;
-  background-image: -moz-linear-gradient(top, #c6dde9, #ffffff);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#c6dde9), to(#ffffff));
-  background-image: -webkit-linear-gradient(top, #c6dde9, #ffffff);
-  background-image: -o-linear-gradient(top, #c6dde9, #ffffff);
-  background-image: linear-gradient(to bottom, #c6dde9, #ffffff);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc6dde9', endColorstr='#ffffffff', GradientType=0);
+  background-color: #EFF5F7;
 }
 h1,
 h2,
@@ -144,24 +137,36 @@ hgroup h5,
 hgroup h6 {
   margin-bottom: 0;
 }
-.alert {
-  background-color: transparent;
+.page-header h1,
+.section-header h1,
+.page-header h2,
+.section-header h2,
+.page-header h3,
+.section-header h3,
+.page-header h4,
+.section-header h4,
+.page-header h5,
+.section-header h5,
+.page-header h6,
+.section-header h6 {
+  margin: 0;
 }
-.dropdown-menu {
-  color: #000000;
+.page-header {
+  margin: 20px 0 30px;
 }
-.well-clear {
-  background-color: transparent;
+.section-header {
+  background: #EAEFF1;
+  border-top: 1px solid #E0E3E4;
+  margin: 20px 0 30px;
+  padding: 10px 15px;
 }
-.btn-link {
-  padding-left: 0;
-  padding-right: 0;
-}
-.btn-link .caret {
-  border-top-color: #076da5;
-}
-.btn-link:hover .caret {
-  border-top-color: #9d261d;
+.section-header h1,
+.section-header h2,
+.section-header h3,
+.section-header h4,
+.section-header h5,
+.section-header h6 {
+  color: #b94d00;
 }
 ul.bulleted li {
   margin: 10px 0;
@@ -184,6 +189,25 @@ ul.bulleted > li {
   position: absolute;
   top: 7px;
   width: 8px;
+}
+.alert {
+  background-color: transparent;
+}
+.dropdown-menu {
+  color: #000000;
+}
+.well-clear {
+  background-color: transparent;
+}
+.btn-link {
+  padding-left: 0;
+  padding-right: 0;
+}
+.btn-link .caret {
+  border-top-color: #076da5;
+}
+.btn-link:hover .caret {
+  border-top-color: #9d261d;
 }
 .btn-block {
   padding-left: 15px;
@@ -256,6 +280,20 @@ ul.bulleted > li {
 .navbar-inverse .navbar-inner {
   color: #ffffff;
 }
+.article-list > li {
+  font-size: 18px;
+}
+.article-list > li a {
+  border-top: 1px solid #DDDFE0;
+  color: #555555;
+  padding: 20px 15px;
+}
+.article-list > li a:hover {
+  background: #eeeeee;
+}
+.article-list > li:last-child > a {
+  border-bottom: none;
+}
 /*------------------------------------*\
     $CUSTOM
     $ARTICLE
@@ -325,6 +363,13 @@ ul.bulleted > li {
 .article-left-sidebar .sidebar .nav > .active > a,
 .article-left-sidebar .sidebar .nav > .active > a:hover {
   color: #599abd;
+}
+.story.thumb .image {
+  float: left;
+  margin-right: 20px;
+}
+.story.thumb .story-headline {
+  margin-top: 0;
 }
 /*------------------------------------*\
     $CUSTOM
