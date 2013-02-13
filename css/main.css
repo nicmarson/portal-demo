@@ -374,20 +374,13 @@ ul.bulleted > li {
   padding: 20px;
 }
 .article .sidebar {
-  background-color: #eff5f8;
-  background-image: -moz-linear-gradient(top, #e4eef4, #ffffff);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e4eef4), to(#ffffff));
-  background-image: -webkit-linear-gradient(top, #e4eef4, #ffffff);
-  background-image: -o-linear-gradient(top, #e4eef4, #ffffff);
-  background-image: linear-gradient(to bottom, #e4eef4, #ffffff);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe4eef4', endColorstr='#ffffffff', GradientType=0);
+  background-color: #F7FAFB;
   padding-top: 40px;
 }
 .article .sidebar h3 {
-  background: #e4eef4;
-  border-bottom: 1px solid #d5e5ee;
-  border-top: 1px solid #d5e5ee;
+  background: #f0f6f9;
+  border-bottom: 1px solid #e5eff5;
+  border-top: 1px solid #e5eff5;
   color: #7d99a8;
   font-size: 24px;
   line-height: 28px;
@@ -1484,42 +1477,5 @@ table.contact-info td.contact-info-entry {
   }
   .carousel-caption {
     position: static;
-  }
-}
-body:after {
-  background: red;
-  bottom: 0;
-  color: #ffffff;
-  content: "undefined";
-  left: 0;
-  opacity: 0.8;
-  filter: alpha(opacity=80);
-  padding: .5em 1em;
-  position: fixed;
-  text-align: center;
-  z-index: 99;
-}
-@media only screen and (max-width: 767px) {
-  body:after {
-    background: orange;
-    content: "mobile";
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  body:after {
-    background: purple;
-    content: "tablet";
-  }
-}
-@media only screen and (min-width: 980px) and (max-width: 1199px) {
-  body:after {
-    background: green;
-    content: "desktop";
-  }
-}
-@media only screen and (min-width: 1200px) {
-  body:after {
-    background: blue;
-    content: "desktop-xl";
   }
 }
