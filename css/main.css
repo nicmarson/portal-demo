@@ -1,3 +1,4 @@
+/* Logos */
 /*!
  * Main - Custom Styles
  *
@@ -45,7 +46,12 @@
   width: 18.19%;
 }
 body {
+  background: #599abd url("../img/regence-footer-bg.png");
+  color: #ffffff;
+}
+#main {
   background-color: #EFF5F7;
+  color: #333333;
 }
 h1,
 h2,
@@ -222,6 +228,11 @@ ul.bulleted > li {
 .breadcrumb > .active {
   color: #555555;
 }
+.nav-pills > li > a:hover,
+.nav-articles > li > a:hover {
+  background-color: #DFE5E7;
+  background-color: rgba(0, 0, 0, 0.065);
+}
 .nav-inverted > li > a {
   color: #ffffff;
 }
@@ -240,8 +251,11 @@ ul.bulleted > li {
   margin-top: 40px;
   padding: 20px 0 0;
 }
-.nav-information .container {
+.nav-information .collapse {
   border-bottom: 1px solid #bad3df;
+}
+.nav-information .collapse.in {
+  border-top: 1px solid #bad3df;
 }
 .nav-information .nav.unstyled {
   font-size: 12px;
@@ -280,19 +294,16 @@ ul.bulleted > li {
 .navbar-inverse .navbar-inner {
   color: #ffffff;
 }
-.article-list > li {
-  font-size: 18px;
+.nav-articles > li {
+  font-size: 16px;
 }
-.article-list > li a {
+.nav-articles > li a {
   border-top: 1px solid #DDDFE0;
   color: #555555;
   padding: 20px 15px;
 }
-.article-list > li a:hover {
-  background: #eeeeee;
-}
-.article-list > li:last-child > a {
-  border-bottom: none;
+.nav-articles > li a:hover {
+  color: #333333;
 }
 .nav-network {
   margin-top: 30px;
@@ -415,12 +426,17 @@ ul.bulleted > li {
 .article-left-sidebar .sidebar .nav > .active > a:hover {
   color: #599abd;
 }
+.story.thumb .abstract {
+  font-size: 12px;
+}
 .story.thumb .image {
   float: left;
   margin-right: 20px;
 }
 .story.thumb .story-headline {
   color: #555555;
+  font-size: 18px;
+  line-height: 1;
   margin-top: 0;
 }
 /*------------------------------------*\
@@ -488,6 +504,14 @@ ul.bulleted > li {
 }
 #header .nav-brand .logo-regence-cs .brand-region {
   left: 70px;
+}
+#header .nav-login {
+  float: right;
+}
+#header .nav-login a {
+  border-right: 1px solid #eeeeee;
+  line-height: 30px;
+  padding: 25px 20px;
 }
 #header .nav-search {
   border-right: 1px solid #eeeeee;
@@ -653,8 +677,6 @@ ul.bulleted > li {
     $FOOTER
 \*------------------------------------*/
 #footer {
-  background: #599abd url("../img/regence-footer-bg.png");
-  color: #ffffff;
   font-size: 13px;
   padding-bottom: 60px;
 }

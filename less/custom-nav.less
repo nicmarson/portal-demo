@@ -15,6 +15,12 @@
   }
 }
 
+.nav-pills > li > a:hover,
+.nav-articles > li > a:hover {
+  background-color: #DFE5E7;
+  background-color: rgba(0,0,0,.065);
+}
+
 // Navigation
 // INVERTED COLORS
 // ---------------
@@ -43,8 +49,12 @@
   margin-top: (@gridGutterWidth*2);
   padding: @gridGutterWidth 0 0;
 
-  .container {
+  .collapse {
     border-bottom: 1px solid @navSecondaryhrBorder;
+
+    &.in {
+      border-top: 1px solid @navSecondaryhrBorder;
+    }
   }
   .nav.unstyled {
     font-size: 12px;
@@ -53,10 +63,11 @@
     }
     a {
       color: @navSecondaryLink;
-    }
-    a:hover {
-      color: @navSecondaryLinkHover;
-      text-decoration: underline;
+
+      &:hover {
+        color: @navSecondaryLinkHover;
+        text-decoration: underline;
+      }
     }
   }
   .nav-pills {
@@ -66,9 +77,10 @@
       color: @navSecondaryTitleColor;
       font-family: @sansFontFamily;
       font-size: 16px;
-    }
-    a:hover {
-      background: @white;
+
+      &:hover {
+        background: @white;
+      }
     }
   }
   .title {
@@ -94,8 +106,8 @@
 
 // ARTICLE LIST
 // ------------
-.article-list > li {
-  font-size: 18px;
+.nav-articles > li {
+  font-size: 16px;
 
   a {
     border-top: 1px solid #DDDFE0;
@@ -103,11 +115,8 @@
     padding: @baseLineHeight 15px;
 
     &:hover {
-      background: @grayLighter;
+      color: @grayDark;
     }
-  }
-  &:last-child > a {
-    border-bottom: none;
   }
 }
 
