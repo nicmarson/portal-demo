@@ -294,6 +294,57 @@ ul.bulleted > li {
 .article-list > li:last-child > a {
   border-bottom: none;
 }
+.nav-network {
+  margin-top: 30px;
+}
+.nav-network li {
+  height: 140px;
+  width: 20%;
+}
+.nav-network li > a {
+  background-color: #F8FAFB;
+  background-image: url(../img/sprites/network.png);
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,.1);
+  -moz-box-shadow: 0 1px 5px rgba(0,0,0,.1);
+  box-shadow: 0 1px 5px rgba(0,0,0,.1);
+  display: block;
+  font: 16px "ProximaNova-Regular", Verdana, sans-serif;
+  line-height: 25px;
+  margin: 0 10px;
+  padding: 95px 0 20px;
+  text-align: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  vertical-align: middle;
+}
+.nav-network li > a:hover {
+  background-color: #F8FAFB;
+  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,.5);
+  -moz-box-shadow: 0 1px 5px rgba(0,0,0,.5);
+  box-shadow: 0 1px 5px rgba(0,0,0,.5);
+}
+.nav-network .active > a,
+.nav-network .active > a:hover {
+  background-color: #076DA5;
+}
+.nav-network .nav-plans a {
+  background-position: center 38px;
+}
+.nav-network .nav-programs a {
+  background-position: center -58px;
+}
+.nav-network .nav-forms a {
+  background-position: center -158px;
+}
+.nav-network .nav-tools a {
+  background-position: center -258px;
+}
+.nav-network .nav-library a {
+  background-position: center -358px;
+}
 /*------------------------------------*\
     $CUSTOM
     $ARTICLE
@@ -369,6 +420,7 @@ ul.bulleted > li {
   margin-right: 20px;
 }
 .story.thumb .story-headline {
+  color: #555555;
   margin-top: 0;
 }
 /*------------------------------------*\
