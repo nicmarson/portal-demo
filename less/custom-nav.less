@@ -15,10 +15,13 @@
   }
 }
 
+.nav > li > a:hover {
+  background-color: transparent; // to undo bootstrap default
+}
+
 .nav-pills > li > a:hover,
 .nav-articles > li > a:hover {
-  background-color: #DFE5E7;
-  background-color: rgba(0,0,0,.065);
+  background-color: @white;
 }
 
 // Navigation
@@ -106,66 +109,21 @@
 
 // ARTICLE LIST
 // ------------
-.nav-articles > li {
-  font-size: 16px;
+.nav-articles {
+  margin-top: 20px;
 
-  a {
-    border-top: 1px solid #DDDFE0;
-    color: @gray;
-    padding: @baseLineHeight 15px;
+  > li {
+    font-size: 16px;
 
-    &:hover {
-      color: @grayDark;
+    > a {
+      border-top: 1px solid #DDDFE0;
+      color: @gray;
+      padding: @baseLineHeight 15px;
+
+      &:hover {
+        color: @grayDark;
+      }
     }
   }
 }
 
-
-// NAV NETWORK
-// ------------
-.nav-network {
-  margin-top: 30px;
-
-  li {
-    height: 140px;
-    width: 20%;
-  }
-  li > a {
-    background-color: #F8FAFB;
-    background-image: url(../img/sprites/network.png);
-    background-repeat: no-repeat;
-    .box-shadow(~"0 1px 5px rgba(0,0,0,.1)");
-    display: block;
-    font: 16px @sansFontFamily;
-    line-height: 25px;
-    margin: 0 10px;
-    padding: 95px 0 20px;
-    text-align: center;
-    .transition(all .2s ease-in-out);
-    vertical-align: middle;
-
-    &:hover {
-      background-color: #F8FAFB;
-      .box-shadow(~"0 1px 5px rgba(0,0,0,.5)");
-    }
-  }
-  .active > a, 
-  .active > a:hover {
-    background-color: #076DA5;
-  }
-  .nav-plans a {
-    background-position: center 38px;
-  }
-  .nav-programs a {
-    background-position: center -58px;
-  }
-  .nav-forms a {
-    background-position: center -158px;
-  }
-  .nav-tools a {
-    background-position: center -258px;
-  }
-  .nav-library a {
-    background-position: center -358px;
-  }
-}

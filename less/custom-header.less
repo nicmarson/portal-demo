@@ -11,72 +11,131 @@
   min-height: @headerHeight;
   text-align: right;
 
-  a:hover {
-    background-color: transparent;
-    text-decoration: none;
-  }
   .nav {
     margin: 0;
+
+    li {
+
+      > a {
+        color: @headerLinkColor;
+        text-decoration: none;
+        .transition(background-color .3s ease-in-out);
+        
+        [class^="icon-"] {
+          color: @brand;
+        }
+        small {        
+          color: @grayLight;
+        }
+        .caret {
+          border-top-color: @brand;
+        }
+        &:hover {
+          background-color: @headerLinkBackground;
+          color: @headerLinkColorHover;
+          text-decoration: none;
+
+          small,
+          [class^="icon-"] {
+            color: @headerLinkColorHover;
+          }
+          .caret {
+            border-top-color: @white;
+          }
+        }
+      }
+    }    
+    .active > a {
+      background-color: @headerLinkBackground;
+      color: @white;
+      text-decoration: none;
+      
+      small,
+      [class^="icon-"] {
+        color: @white;
+      }
+      .caret {
+        border-top-color: @white;
+      }
+    }
+    .active > a:hover,
+    .active > a:focus {
+      background-color: darken(@headerLinkBackground, 4%);
+    }
   }
   .container {
     padding: 0;
     position: relative;
   }
 
-
   // Nav Brand
-  .nav-brand {
+  .nav .nav-brand {
     float: left;
 
-    a {
+    > a {
+      border-left: 1px solid @headerLinkBorder;
       display: block;
-      margin-left: 20px;
+      height: 100%;
+      padding-left: 20px;
       margin-right: 5px;
       padding-bottom: 18px;
       position: relative;
+      width: 100%;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    .brand-logo {
+      background: url("../img/identity/identity.png") no-repeat;
+      display: block;
+      max-width: 250px;
+      min-width: 143px;
+      position: relative;
+      *width: 250px;
     }
     .brand-region {
-      bottom: 0;
+      bottom: 10px;
       color: @grayLight;
       display: block;
       font-family: arial;
       font-size: 12px;
-      left: 0;
+      left: 20px;
       line-height: 18px;
       position: absolute;
       white-space: nowrap;
     }
     .logo-asuris {
       // Height 45px
-      margin-bottom: 5px;
-      margin-top: 12px;
+      padding-bottom: 23px;
+      padding-top: 12px;
     }
     .logo-myasuris {
       // Height 33px
-      margin-bottom: 7px;
-      margin-top: 22px;
+      padding-bottom: 25px;
+      padding-top: 22px;
     }
     .logo-myregence {
       // Height 50px
-      margin-bottom: 2px;
-      margin-top: 10px;
+      padding-bottom: 20px;
+      padding-top: 10px;
     }
     .logo-regence-s,
     .logo-regence-cs {
       // Height 33px
-      margin-bottom: 10px;
-      margin-top: 19px;
+      padding-bottom: 28px;
+      padding-top: 19px;
     }
     .logo-regence-s .brand-region {
-      left: 36px;
+      left: 56px;
     }
     .logo-regence-cs .brand-region {
-      left: 70px;
+      left: 90px;
     }
   }
 
   // Nav Login 
-  .nav-login {
+  .nav .nav-login {
     float: right;
 
     a {
@@ -88,19 +147,22 @@
 
 
   // Nav Search  
-  .nav-search {
-    border-right: 1px solid @headerLinkBorder;
+  .nav .nav-search {
     float: right;
+    width: 49.9999%;
 
     form {
-      margin: 25px;
+      border-right: 1px solid @headerLinkBorder;
+      border-top: 1px solid @headerLinkBorder;
+      margin: 0;
+      padding: 25px 15px 25px 5px;
       position: relative;
     }
     button {
       border: none;
       position: absolute;
-      right: 10px;
-      top: 0;
+      right: 30px;
+      top: 25px;
 
       &:hover {
         text-decoration: none;
@@ -110,30 +172,20 @@
 
 
   // Nav Shopping
-  .nav-shopping {
-    border-right: 1px solid @headerLinkBorder;
-    float: right;
+  .nav .nav-shopping {
+    clear: left;
+    float: left;
     text-align: left;
+    width: 49.9999%;
 
-    a {
-      color: @headerLinkColor;
+    > a {
+      border-left: 1px solid @headerLinkBorder;
+      border-right: 1px solid @headerLinkBorder;
+      border-top: 1px solid @headerLinkBorder;
       display: block;
       height: 30px;
-      padding: 25px 100px 25px 70px;
+      padding: 25px 15px;
       position: relative;
-      text-decoration: none;
-      .transition(background-color .2s ease-in-out);
-
-      &:hover {
-        background-color: @headerLinkBackground;
-        color: @headerLinkColorHover;
-        text-decoration: none;
-
-        small,
-        [class^="icon-"] {
-          color: @headerLinkColorHover;
-        }
-      }
     }
     a:hover .caret,
     .active > a .caret {
@@ -154,7 +206,6 @@
       background-color: darken(@headerLinkBackground, 4%);
     }
     .caret {
-      border-top-color: @brand;
       border-top-width: 8px;
       border-right-width: 8px;
       border-left-width:  8px;
@@ -165,7 +216,6 @@
       top: 22px;
     }
     .icon-users {
-      color: @brand;
       font-size: 26px;
       left: 16px;
       height: 40px;
@@ -179,50 +229,35 @@
       line-height: 16px;
 
       small {
-        color: @grayLight;
         display: block;
         font-size: 13px;
       }
     }
   }
 }
-.brand {
-  background: url("../img/identity/identity.png") no-repeat;
-  display: block;
-  max-width: 250px;
-  min-width: 143px;
-  position: relative;
-  *width: 250px;
-
-  a {
-    display: block;
-    height: 100%;
-    width: 100%;
-  }
-}
 
 /* Logos */
-.logo-asuris {
+.logo-asuris .brand-logo {
   background-position: 0 -300px;
   height: 45px;
   width: 148px;
 }
-.logo-myasuris {
+.logo-myasuris .brand-logo {
   background-position: 0 -400px;
   height: 33px;
   width: 176px;
 }
-.logo-myregence {
+.logo-myregence .brand-logo {
   background-position: 0 -200px;
   height: 50px;
   width: 250px;
 }
-.logo-regence-cs {
+.logo-regence-cs .brand-logo {
   background-position: 0 0;
   height: 33px;
   width: 180px;
 }
-.logo-regence-s {
+.logo-regence-s .brand-logo {
   background-position: 0 -100px;
   height: 33px;
   width: 145px;
@@ -230,30 +265,33 @@
 /* High Res Support */
 @media all and (-webkit-min-device-pixel-ratio : 1.5) {
 
-  .backgroundsize .brand {
+  .backgroundsize #header .brand-logo {
     background-image: url("../img/identity/identity@2x.png");
     background-size: 250px auto; /* Actual width is 450px */
   }
 }
 
 /* SVG Support */
-.svg.backgroundsize .logo-regence-cs {
-  background: url("../img/identity/regence-cs.svg") no-repeat 0 0;
-  background-size: 178px auto;
-}
-.svg.backgroundsize .logo-regence-s {
-  background: url("../img/identity/regence-s.svg") no-repeat 0 0;
-  background-size: 143px auto;
-}
-.svg.backgroundsize .logo-myregence {
-  background: url("../img/identity/myregence.svg") no-repeat 0 0;
-  background-size: 250px auto;
-}
-.svg.backgroundsize .logo-asuris {
-  background: url("../img/identity/asuris.svg") no-repeat 0 0;
-  background-size: 148px auto;
-}
-.svg.backgroundsize .logo-myasuris {
-  background: url("../img/identity/myasuris.svg") no-repeat 0 0;
-  background-size: 176px auto;
+.svg.backgroundsize #header {
+
+  .logo-regence-cs .brand-logo {
+    background: url("../img/identity/regence-cs.svg") no-repeat 0 0;
+    background-size: 178px auto;
+  }
+  .logo-regence-s .brand-logo {
+    background: url("../img/identity/regence-s.svg") no-repeat 0 0;
+    background-size: 143px auto;
+  }
+  .logo-myregence .brand-logo {
+    background: url("../img/identity/myregence.svg") no-repeat 0 0;
+    background-size: 250px auto;
+  }
+  .logo-asuris .brand-logo {
+    background: url("../img/identity/asuris.svg") no-repeat 0 0;
+    background-size: 148px auto;
+  }
+  .logo-myasuris .brand-logo {
+    background: url("../img/identity/myasuris.svg") no-repeat 0 0;
+    background-size: 176px auto;
+  }
 }

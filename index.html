@@ -34,11 +34,14 @@
         </ul>
         <ul class="nav clearfix" itemscope itemtype="http://schema.org/Organization">
           <li class="nav-brand">
-            <a class="logo-regence-cs" href="index.html"><span class="hide-text">Regence</span> <span class="brand-region">BlueCross BlueShield of Oregon</span></a>
+            <a class="logo-regence-cs" href="index.html">
+              <span class="brand-logo"><span class="hide-text">Regence</span></span>
+              <span class="brand-region">BlueCross BlueShield of Oregon</span>
+            </a>
           </li>
           <li class="nav-login"><a href="#login">Sign in</a></li>
           <li class="nav-shopping">
-            <a id="js-shopping-toggle" href="#" class="toggle shopping-toggle-button"><span class="shopping-label">Visitor <small>New Location</small></span><span aria-hidden="true" class="icon-users"></span><b class="caret"></b></a>
+            <a id="js-shopping-toggle" href="#" class="toggle shopping-toggle-button"><span class="shopping-label">Individual &amp; Families <small>Portland, OR</small></span><span aria-hidden="true" class="icon-users hidden-phone"></span><b class="caret"></b></a>
           </li>
           <li class="nav-search">
             <form class="form-search" action="http://www.regence.com/about/search.jsp" method="get" name="header-search" id="search" role="search">
@@ -53,7 +56,7 @@
 
     <div id="main" role="main">
       <div class="container">
-        <div class="tabbable tabs-below" id="hero">
+        <div class="tabbable tabs-below" id="hero-home">
           <div class="tab-content">
 
             <div class="tab-pane hero-unit hero-image active" id="default">
@@ -65,11 +68,11 @@
             </div>
 
             <div class="tab-pane hero-unit hero-image" id="individual">
-              <a class="caption span8" href="individual.html">
+              <div class="caption span8">
                 <h1 class="caption-title">Health plans and support<br>
                   <small>Whether you’re looking for new coverage, information about your existing benefits or need to ask a question, we’re here to help.</small></h1>
                 <p class="caption-text">See information for individuals and families&nbsp;&rsaquo;</p>
-              </a>
+              </div>
             </div>
 
             <div class="tab-pane hero-unit hero-image" id="medicare">
@@ -80,7 +83,7 @@
               </div>
             </div>
 
-            <div class="tab-pane hero-unit hero-image" id="employers">
+            <div class="tab-pane hero-unit hero-image" id="employer">
               <a class="caption span8" href="employer.html">
                 <h1 class="caption-title">Employers <br>
                   <small>Health care benefits, at your service</small></h1>
@@ -88,7 +91,7 @@
               </a>
             </div>
 
-            <div class="tab-pane hero-unit hero-image" id="producers">
+            <div class="tab-pane hero-unit hero-image" id="producer">
               <div class="caption span8">
                 <h1 class="caption-title">Producers <br>
                   <small>Sub-headline and/or call to action</small></h1>
@@ -96,7 +99,7 @@
               </div>
             </div>
 
-            <div class="tab-pane hero-unit hero-image" id="providers">
+            <div class="tab-pane hero-unit hero-image" id="provider">
               <div class="caption span8">
                 <h1 class="caption-title">Providers <br>
                   <small>Sub-headline and/or call to action</small></h1>
@@ -106,11 +109,13 @@
 
           </div>
           <ul class="nav nav-pills" id="heroTab">
-            <li class="tab-individual"><a href="#individual" data-toggle="tab">Individuals &amp; Families</a></li>
+            <li class="tab-individual"><!-- Button to trigger individual modal -->
+            <a href="#individualModal" data-toggle="modal">Individuals &amp; Families</a></li>
             <li class="tab-medicare"><a href="#medicare" data-toggle="tab">Medicare-Eligible</a></li>
-            <li class="tab-employers"><a href="#employers" data-toggle="tab">Employers</a></li>
-            <li class="tab-producers"><a href="#producers" data-toggle="tab">Producers</a></li>
-            <li class="tab-providers"><a href="#providers" data-toggle="tab">Providers</a></li>
+            <li class="tab-employer"><!-- Button to trigger individual modal -->
+            <a href="#employerModal" data-toggle="modal">Employers</a></li>
+            <li class="tab-producer"><a href="#producer" data-toggle="tab">Producers</a></li>
+            <li class="tab-provider"><a href="#provider" data-toggle="tab">Providers</a></li>
           </ul>
         </div>
         <nav class="nav-information">
@@ -174,6 +179,52 @@
             </ul>
           </div>
         </nav>
+      </div>
+
+      <!-- Individual Modal -->
+      <div id="individualModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="individualModalLabel" aria-hidden="true">
+        <form class="form-horizontal form-verify-location">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 id="individualModalLabel">Welcome</h3>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Please tell us your location so that we can personalize the website.</p>
+            <div class="control-group">
+              <label class="control-label" for="inputZIP">ZIP Code</label>
+              <div class="controls">
+                <input type="text" id="inputZIP" placeholder="97201">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+            <a href="individual.html" class="btn btn-primary">Continue</a>
+          </div>
+        </form>
+      </div>
+
+      <!-- Employer Modal -->
+      <div id="employerModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="employerModalLabel" aria-hidden="true">
+        <form class="form-horizontal form-verify-location">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 id="employerModalLabel">Welcome</h3>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Please tell us your location so that we can personalize the website.</p>
+            <div class="control-group">
+              <label class="control-label" for="inputZIP">ZIP Code</label>
+              <div class="controls">
+                <input type="text" id="inputZIP" placeholder="97201">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+            <a href="employer.html" class="btn btn-primary">Continue</a>
+          </div>
+        </form>
       </div>
     </div>
 

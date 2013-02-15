@@ -9,6 +9,45 @@ $(function() {
     '<span class="icon-bar"></span>'+
   '</a>');
 
+  function hoverTabOn(e,t) {
+    $(e).parent().addClass("active");
+    $(".tab-pane").removeClass("active");
+    $(t).addClass("active");
+  }
+
+  function hoverTabOff(e) {
+    $(e).parent().removeClass("active");
+    $(".tab-pane").removeClass("active");
+    $("div#default").addClass("active");
+  }
+
+  // Hover Tabs
+  $("li.tab-individual a").hover(function() {
+    hoverTabOn(this, "div#individual");
+  }, function() {
+    hoverTabOff(this);
+  });
+  $("li.tab-medicare a").hover(function() {
+    hoverTabOn(this, "div#medicare");
+  }, function() {
+    hoverTabOff(this);
+  });
+  $("li.tab-employer a").hover(function() {
+    hoverTabOn(this, "div#employer");
+  }, function() {
+    hoverTabOff(this);
+  });
+  $("li.tab-producer a").hover(function() {
+    hoverTabOn(this, "div#producer");
+  }, function() {
+    hoverTabOff(this);
+  });
+  $("li.tab-provider a").hover(function() {
+    hoverTabOn(this, "div#provider");
+  }, function() {
+    hoverTabOff(this);
+  });
+
   // Anystretch Plugin for Responsive Images
   // This takes a background image and resizes it based on window size
   // * USE background-image: NOT background: *

@@ -1981,6 +1981,32 @@ table th[class*="span"],
   content: "\e001";
   vertical-align: top;
 }
+.icon-regence {
+  background-image: url(../img/sprites/network.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  *margin-right: .3em;
+  line-height: 50px;
+  vertical-align: text-top;
+  margin-top: 1px;
+}
+.icon-briefcase {
+  background-position: center 0;
+}
+.icon-heart {
+  background-position: center -100px;
+}
+.icon-paper {
+  background-position: center -200px;
+}
+.icon-puzzle {
+  background-position: center -300px;
+}
+.icon-bookmark {
+  background-position: center -400px;
+}
 fieldset.glyph {
   padding-left: 110px;
   position: relative;
@@ -3002,7 +3028,6 @@ input[type="submit"].btn.btn-mini {
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 0;
-  margin-top:20px;
 }
 .nav-list > li > a,
 .nav-list .nav-header {
