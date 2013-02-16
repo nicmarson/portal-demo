@@ -47,34 +47,6 @@
     <hours>Open weekdays 8-5</hours>
   </marker>
 
-  <marker>
-    <lat>44.938229</lat>
-    <lng>-123.038365</lng>
-    <title>Salem Regence Group</title>
-    <address>201 High Street SE</address>
-    <suite></suite>
-    <city>Salem</city>
-    <state>OR</state>
-    <zip>97301</zip>
-    <phone1>(800) 545-5364</phone1>
-    <phone2></phone2>
-    <fax></fax>
-    <hours>Open weekdays 8-5</hours>
-  </marker>
-
-  <marker>
-    <lat>42.371527</lat>
-    <lng>-122.859459</lng>
-    <title>Southern Regional Office</title>
-    <address>2057 Commerce Drive</address>
-    <suite></suite>
-    <city>Medford</city>
-    <state>OR</state>
-    <zip>97504</zip>
-    <phone1>(541) 772-8906</phone1>
-    <phone2></phone2>
-    <fax></fax>
-    <hours>Open weekdays 8-5</hours>
-  </marker>
+  
 
 </markers>
